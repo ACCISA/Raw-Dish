@@ -17,8 +17,8 @@ import java.util.ArrayList;
 public class Window {
 
 
-    private int width;
-    private int height;
+    private final int width = 350;
+    private final int height = 600;
     private String fxml;
     private String title = "BullDozer";
     private String icon;
@@ -27,20 +27,23 @@ public class Window {
     private double y = 0;
     private Stage stage;
     private ArrayList<Stage> allStage;
-    private String style;
+    private String style = "src/main/resources/com/example/mchacks/Styles/styles.css";
 
-    public Window(int w, int h, String fxml, String style){
+    public Window( String fxml, String style){
         this.style = style;
-        this.width = w;
-        this.height = h;
+
         this.fxml = fxml;
-        this.icon = "Images/pharma_logo.jpg";
+        this.icon = "Images/pharma_logo.jpg"; // TODO
         CreateWindow();
     }
 
-    public Window(int w, int h, String fxml, String title, String icon){
-        this.width = w;
-        this.height = h;
+    public Window(String fxml){
+        this.fxml = fxml;
+        CreateWindow();
+    }
+
+    public Window( String fxml, String title, String icon){
+
         this.fxml = fxml;
         this.title = title;
         this.icon = icon;
@@ -64,7 +67,7 @@ public class Window {
         int absLength = abs.length();
         String sourcePath = abs.substring(0,absLength-fxmlLength);
 
-        stage.getIcons().add(new Image(sourcePath+"src/main/resources/com/example/pharmasoft/" + icon));
+//        stage.getIcons().add(new Image(sourcePath+"src/main/resources/com/example/mchacks/" + icon));
         try{
 
             URL fxmlLocation = getClass().getClassLoader().getResource(fxml);

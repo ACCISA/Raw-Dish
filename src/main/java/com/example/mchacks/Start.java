@@ -12,14 +12,14 @@ import java.io.IOException;
 public class Start extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        stage.initStyle(StageStyle.UNDECORATED);
-        FXMLLoader fxmlLoader = new FXMLLoader(Start.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 350, 600);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
-//        Window start = new Window();
-//        start.Open();
+//        stage.initStyle(StageStyle.UNDECORATED);
+//        FXMLLoader fxmlLoader = new FXMLLoader(Start.class.getResource("test.fxml"));
+//        Scene scene = new Scene(fxmlLoader.load(), 350, 600);
+//        stage.setTitle("Hello!");
+//        stage.setScene(scene);
+//        stage.show();
+        Window start = new Window("src/main/resources/com/example/mchacks/test.fxml");
+        start.Open();
     }
 
     public static void main(String[] args) {
