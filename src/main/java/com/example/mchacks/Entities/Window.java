@@ -120,5 +120,9 @@ public class Window {
         stage.hide();
     }
 
+    public void ChangeBackground(String filePath){
+
+    }
+
 
 }
