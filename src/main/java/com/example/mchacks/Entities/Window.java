@@ -60,7 +60,6 @@ public class Window {
         this.stage = new Stage();
 
         stage.initStyle(StageStyle.UNDECORATED);
-        System.out.println(icon);
         File f = new File(fxml);
         String abs = f.getAbsolutePath();
         int fxmlLength = fxml.length();
