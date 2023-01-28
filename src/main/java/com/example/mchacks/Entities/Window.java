@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -17,8 +18,8 @@ import java.util.ArrayList;
 public class Window {
 
 
-    private final int width = 350;
-    private final int height = 600;
+    private final int width = 327;
+    private final int height = 657;
     private String fxml;
     private String title = "BullDozer";
     private String icon;
@@ -60,6 +61,7 @@ public class Window {
         this.stage = new Stage();
 
         stage.initStyle(StageStyle.UNDECORATED);
+        stage.initStyle(StageStyle.TRANSPARENT);
         File f = new File(fxml);
         String abs = f.getAbsolutePath();
         int fxmlLength = fxml.length();
@@ -74,7 +76,7 @@ public class Window {
             URL url = new File(fxml).toURI().toURL();
             Parent root = FXMLLoader.load(url);
             Scene scene = new Scene(root,width,height);
-
+            scene.setFill(Color.TRANSPARENT);
 
             scene.setOnMousePressed(mouseEvent -> {
                 x = mouseEvent.getSceneX();
