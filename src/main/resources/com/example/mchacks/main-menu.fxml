@@ -11,5 +11,10 @@
                 <Image url="@Images/Phone_Border.png" />
             </image>
         </ImageView>
+      <ImageView fitHeight="500.0" fitWidth="47.0" layoutX="41.0" layoutY="39.0">
+         <image>
+            <Image url="@Images/background.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
