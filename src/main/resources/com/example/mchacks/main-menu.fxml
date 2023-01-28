@@ -23,7 +23,7 @@
                       <AnchorPane fx:id="navBarPane" minHeight="0.0" minWidth="0.0" prefHeight="42.0" prefWidth="933.0">
                            <children>
                               <Text layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                              <JFXButton fx:id="letUsChoose" layoutX="806.0" layoutY="8.0" text="😋 Let Us Choose" />
+                              <JFXButton fx:id="letUsChoose" layoutX="806.0" layoutY="8.0" onAction="#onLetUsChoose" text="😋 Let Us Choose" />
                            </children></AnchorPane>
                     </content>
                   </ScrollPane>
