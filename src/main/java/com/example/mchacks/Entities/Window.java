@@ -5,7 +5,9 @@ import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -21,7 +23,7 @@ public class Window {
     private final int width = 327;
     private final int height = 657;
     private String fxml;
-    private String title = "BullDozer";
+    private String title = "Radish";
     private String icon;
     private String styleSheet = "style.css";
     private double x = 0;
@@ -57,6 +59,12 @@ public class Window {
 
     }
 
+    private ImageView image(){
+        Image image = new Image("");
+        ImageView background = new ImageView(image);
+        return background;
+    }
+
     private void CreateWindow(){
         this.stage = new Stage();
 
@@ -78,17 +86,21 @@ public class Window {
             Scene scene = new Scene(root,width,height);
             scene.setFill(Color.TRANSPARENT);
 
-            scene.setOnMousePressed(mouseEvent -> {
-                x = mouseEvent.getSceneX();
-                y = mouseEvent.getSceneY();
-            });
-
-            scene.setOnMouseDragged(mouseEvent -> {
-                stage.setX(mouseEvent.getScreenX() - x);
-                stage.setY(mouseEvent.getScreenY() - y);
-            });
+//            scene.setOnMousePressed(mouseEvent -> {
+//                x = mouseEvent.getSceneX();
+//                y = mouseEvent.getSceneY();
+//            });
+//
+//            scene.setOnMouseDragged(mouseEvent -> {
+//                stage.setX(mouseEvent.getScreenX() - x);
+//                stage.setY(mouseEvent.getScreenY() - y);
+//            });
             stage.setTitle(title);
             stage.setScene(scene);
+
+            ScrollPane scroll = new ScrollPane();
+
+
             URL urlCSS = new File(style).toURI().toURL();
             scene.getStylesheets().add(urlCSS.toExternalForm());
             stage.setResizable(false);

@@ -12,6 +12,5 @@ public class BaseController {
     public void closeBtnAction(ActionEvent actionEvent) {
         closeBtn.getScene().getWindow().hide();
         System.out.println("[APP] Application Closed");
-
     }
 }
