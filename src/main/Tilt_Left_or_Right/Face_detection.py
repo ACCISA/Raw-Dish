@@ -158,7 +158,7 @@ while True:
             else:
                 cv.putText(frame, 'RIGHT TILT :' + str(int(angle))+' degrees',
                         (20, 30), cv.FONT_HERSHEY_SIMPLEX, 1, 
-                        (0, 0, 0), 2, cv.LINE_4)
+                        (255, 0, 0), 2, cv.LINE_4)
                 if Last_printed == "Straight":
                     Last_printed="Right"
                     Response_List.append(Left[Question])
@@ -166,34 +166,34 @@ while True:
         else:
             cv.putText(frame, 'STRAIGHT :', (20, 30),
                        cv.FONT_HERSHEY_SIMPLEX, 1, 
-                       (0, 0, 0), 2, cv.LINE_4)
+                       (255, 0, 0), 2, cv.LINE_4)
             Last_printed="Straight"
     if Question==len(Question_List):
         break  
     if Question==len(Question_List)-1:
         cv.putText(frame, Last_question[0], (450, 250),
                         cv.FONT_HERSHEY_TRIPLEX, 1, 
-                        (0, 0, 0), 2, cv.LINE_4)
+                        (255, 0, 0), 2, cv.LINE_4)
         cv.putText(frame, Last_question[1], (20, 250),
                         cv.FONT_HERSHEY_TRIPLEX, 1, 
-                        (0, 0, 0), 2, cv.LINE_4)
+                        (255, 0, 0), 2, cv.LINE_4)
         cv.putText(frame, Last_question[2], (450, 50),
                         cv.FONT_HERSHEY_TRIPLEX, 1, 
-                        (0, 0, 0), 2, cv.LINE_4)
+                        (255, 0, 0), 2, cv.LINE_4)
         cv.putText(frame, Last_question[3], (20, 50),
                         cv.FONT_HERSHEY_TRIPLEX, 1, 
-                        (0, 0, 0), 2, cv.LINE_4)
+                        (255, 0, 0), 2, cv.LINE_4)
     else:
         cv.putText(frame, Right[Question], (450, 200),
                         cv.FONT_HERSHEY_TRIPLEX, 1, 
-                        (0, 0, 0), 2, cv.LINE_4)
+                        (255, 0, 0), 2, cv.LINE_4)
         cv.putText(frame, Left[Question], (20, 200),
                         cv.FONT_HERSHEY_TRIPLEX, 1, 
-                        (0, 0, 0), 2, cv.LINE_4)
+                        (255, 0, 0), 2, cv.LINE_4)
     
     cv.putText(frame, Question_List[Question], (20, 450),
                     cv.FONT_HERSHEY_TRIPLEX, 1, 
-                    (0, 0, 0), 2, cv.LINE_4)
+                    (255, 0, 0), 2, cv.LINE_4)
     cv.imshow('Frame', frame)
     
     if cv.waitKey(1) & 0xFF == 27:
