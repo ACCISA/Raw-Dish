@@ -48,34 +48,34 @@
                      </font>
                   </Text>
                   <Text layoutX="23.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5. Would you like to be surprised?" />
-                  <JFXSlider fx:id="howItsGoing" blockIncrement="1.0" layoutX="41.0" layoutY="239.0" max="3.0" min="1.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="2.0" />
+                  <JFXSlider fx:id="howItsGoing" blockIncrement="1.0" layoutX="41.0" layoutY="239.0" max="2.0" min="0.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="1.0" />
                   <Text layoutX="203.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Good" />
                   <Text layoutX="38.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bad" />
                   <Text layoutX="117.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alright" />
                   <Text layoutX="197.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="51 - 100$" />
                   <Text layoutX="32.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4 - 25$" />
                   <Text layoutX="114.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="26 - 50$" />
-                  <JFXSlider fx:id="moneySpending" blockIncrement="1.0" layoutX="40.0" layoutY="313.0" max="3.0" min="1.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="2.0" />
+                  <JFXSlider fx:id="moneySpending" blockIncrement="1.0" layoutX="40.0" layoutY="313.0" max="2.0" min="0.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="1.0" />
                   <Text layoutX="21.0" layoutY="556.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6. How old are you?" />
-                  <JFXSlider fx:id="howItsGoing1" blockIncrement="1.0" layoutX="34.0" layoutY="574.0" max="75.0" min="18.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="20.0" />
+                  <JFXSlider fx:id="howOld" blockIncrement="1.0" layoutX="34.0" layoutY="574.0" max="75.0" min="18.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="20.0" />
                   <Text layoutX="26.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7. Are you from Montreal?" />
                   <Text layoutX="28.0" layoutY="704.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8. Whom are you eating with?" />
                   <JFXButton fx:id="submitButton" layoutX="106.0" layoutY="802.0" onAction="#submitQuestionnaire" stylesheets="@Styles/questionaire.css" text="Submit" />
-                  <JFXSlider fx:id="genderID" blockIncrement="1.0" layoutX="33.0" layoutY="152.0" max="3.0" min="1.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="2.0" />
+                  <JFXSlider fx:id="genderID" blockIncrement="1.0" layoutX="33.0" layoutY="152.0" max="2.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="1.0" />
                   <Text layoutX="201.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Other" />
                   <Text layoutX="107.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Female" />
                   <Text layoutX="23.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Male" />
-                  <JFXSlider fx:id="lastMeal" blockIncrement="1.0" layoutX="40.0" layoutY="406.0" max="3.0" min="1.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="2.0" />
+                  <JFXSlider fx:id="lastMeal" blockIncrement="1.0" layoutX="40.0" layoutY="406.0" max="2.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="1.0" />
                   <Text layoutX="26.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nothing" />
                   <Text layoutX="114.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Snack" />
                   <Text layoutX="196.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meal" />
-                  <JFXSlider fx:id="surpriseID" blockIncrement="1.0" layoutX="32.0" layoutY="492.0" max="2.0" min="1.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="1.0" />
+                  <JFXSlider fx:id="surpriseID" blockIncrement="1.0" layoutX="32.0" layoutY="492.0" max="1.0" min="0.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="0.01" />
                   <Text layoutX="37.0" layoutY="521.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No" />
                   <Text layoutX="197.0" layoutY="521.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yes" />
-                  <JFXSlider fx:id="surprise1" blockIncrement="1.0" layoutX="32.0" layoutY="636.0" max="2.0" min="1.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="1.0" />
+                  <JFXSlider fx:id="locationID" blockIncrement="1.0" layoutX="32.0" layoutY="636.0" max="1.0" min="0.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="0.01" />
                   <Text layoutX="39.0" layoutY="671.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No" />
                   <Text layoutX="199.0" layoutY="669.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yes" />
-                  <JFXSlider fx:id="moneySpending1" blockIncrement="1.0" layoutX="34.0" layoutY="731.0" max="3.0" min="1.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="2.0" />
+                  <JFXSlider fx:id="company" blockIncrement="1.0" layoutX="34.0" layoutY="731.0" max="2.0" min="0.0" minorTickCount="1" prefHeight="16.0" prefWidth="189.0" value="1.0" />
                   <Text layoutX="26.0" layoutY="768.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friends" />
                   <Text layoutX="108.0" layoutY="768.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lover" />
                   <Text layoutX="191.0" layoutY="768.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Family" />
