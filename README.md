@@ -14,8 +14,7 @@ Raw-Dish uses Java for its powerfull JavaFX Framework. Once a questionnaire is s
 ## Demo
 ![alt text](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/360/910/datas/gallery.jpg)
 ![alt text](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/360/909/datas/gallery.jpg)
-<img src="https://i.imgur.com/CC84rE9.png" align="right"
-     alt="Size Limit logo by Anton Lovchikov" width="416" height="537">
+![alt text](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/362/479/datas/gallery.jpg)
 ![alt text](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/361/070/datas/gallery.jpg)
 ![alt text](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/361/817/datas/gallery.jpg)
 
