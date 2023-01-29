@@ -30,7 +30,7 @@ def AddInputRow(*args):
     dataString = ""
     # jsonify the data
     for i in range(len(args)):
-        dataString += "\'field"+(i+1)+"\':\'"+ args[i] +"\'"
+        dataString += "\'field"+str(i+1)+"\':\'"+ str(args[i]) +"\'"
     data = start+dataString+end
     val = (data)
     cursor.execute(sql,val)

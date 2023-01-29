@@ -31,6 +31,7 @@ def transfer_data(func):
         field7 = request.args.get('field7')
         field8 = request.args.get('field8')
         fieldList = [field1,field2,field3,field4,field5,field6,field7,field8]
+
         database.AddInputRow(field1,field2,field3,field4,field5,field6,field7,field8) #store the inputs to the database
         # store to csv
         writeToOutput(fieldList)
@@ -75,8 +76,7 @@ def Debug():
 
 Start()
 
-x = input("start?")
-Debug()
+
 
 
 if __name__ == "__main__":
