@@ -5,7 +5,7 @@ MCHacks Hackathon Submission.
 This application is an extension to the Raddish website. It adds an option to let an AI make the decision for your next meal. This AI is trained with a dataset and uses and API to manage all information, such as database queries and http requests.
 
 <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/360/528/datas/gallery.jpg" align="right"
-     alt="Size Limit logo by Anton Lovchikov" width="120" height="178">
+     alt="Size Limit logo by Anton Lovchikov" width="459" height="257">
      
 ## Description
 
