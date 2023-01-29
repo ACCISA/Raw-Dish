@@ -1,5 +1,6 @@
 import cv2 as cv
 import numpy as np
+import time
   
   
 # 0 for webcam feed ; add "path to file"
@@ -21,9 +22,12 @@ capture = cv.VideoCapture(0)
 face_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade = cv.CascadeClassifier("haarcascade_eye.xml")
 Last_printed = "Straight" # this will be used later on to not repeat tilting
+angle1=0 #Used for the last question to see when the user stops tiltin their head
 while True:
-    
     ret, frame = capture.read()
+    frame = cv.flip(frame,1)
+    
+    #frame=cv.resize(frame, (327, 657))
     gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, 1.1, 5)
     x, y, w, h = 0, 0, 0, 0
@@ -88,6 +92,7 @@ while True:
         real_eye1=[None, None, None, None]
         real_eye2=[None, None, None, None]
     
+                
     
     if (real_eye1[0] is not None) and (real_eye2[0] is not None):
         if real_eye1[0] < real_eye2[0]:
@@ -135,13 +140,18 @@ while True:
                        (0, 0, 0), 2, cv.LINE_4)
             if Last_printed == "Straight":
                 if Question==len(Question_List)-1:
-                    Question+=1
-                    if angle>25:
-                        Response_List.append(Last_question[1])
-                        break   
-                    else:
-                        Response_List.append(Last_question[2])
-                        break
+                    if angle>=angle1:
+                        Question+=1
+                    
+                        if angle>25:
+                            if Last_printed == "Straight":
+                                Response_List.append(Last_question[1])
+                                break   
+                        else:
+                            if Last_printed == "Straight":
+                                Response_List.append(Last_question[2])
+                                break
+                    angle1=angle
                         
                 else:
                     Response_List.append(Right[Question])
@@ -149,12 +159,18 @@ while True:
                     Last_printed="Left"
         elif angle < -10:
             if Question==len(Question_List)-1:
-                if angle<-25:
-                    Response_List.append(Last_question[0])
-                    break
-                else:
-                    Response_List.append(Last_question[3])
-                    break
+                
+                if angle>=angle1:
+                    Question+=1
+                    if angle<-25:
+                        if Last_printed == "Straight":
+                            Response_List.append(Last_question[0])
+                            break
+                    else:
+                        if Last_printed == "Straight":
+                            Response_List.append(Last_question[3])
+                            break
+                angle1=angle
             else:
                 cv.putText(frame, 'RIGHT TILT :' + str(int(angle))+' degrees',
                         (20, 30), cv.FONT_HERSHEY_SIMPLEX, 1, 
