@@ -21,7 +21,6 @@ Raw-Dish uses Java for its powerfull JavaFX Framework. Once a questionnaire is s
 
 
 
-
 ## Getting Started
 
 ### Dependencies
