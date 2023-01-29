@@ -34,7 +34,7 @@ command to run if program contains helper info
 
 ## Authors
 
-Aniss Chalah https://www.linkedin.com/in/aniss-chalah-606774203/ 
+Romullus
 Constance Prevot https://www.linkedin.com/in/constance-prevot/ 
 Richard Badir https://www.linkedin.com/in/richard-badir-199b44234/ 
 Andrew Dagher https://www.linkedin.com/in/aniss-chalah-606774203/
