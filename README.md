@@ -1,4 +1,4 @@
-# mchacks
+# Raw-Dish
 
 MCHacks Hackathon Submission.
 
@@ -12,7 +12,7 @@ This application is an extension to the Raddish website. It adds an option to le
 Raw-Dish uses Java for its powerfull JavaFX Framework. Once a questionnaire is submitted an api request is made and the AI makes a decision based on the information provided. It will then store all the data into a database for developement purposes. Once the AI finds an answer it responses to the client with information on a restaurant and a dish. The REST API is build with python using Flask.
 
 ## Demo
-![alt text](http://url/to/img.png)
+![alt text](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/360/910/datas/gallery.jpg)
 
 
 
