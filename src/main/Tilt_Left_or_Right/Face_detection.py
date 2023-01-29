@@ -191,16 +191,16 @@ try:
         if Question==len(Question_List)-1:
             cv.putText(frame, Last_question[0], (450, 250),
                             cv.FONT_HERSHEY_TRIPLEX, 1, 
-                            (255, 0, 0), 2, cv.LINE_4)
+                            (0, 255, 0), 2, cv.LINE_4)
             cv.putText(frame, Last_question[1], (20, 250),
                             cv.FONT_HERSHEY_TRIPLEX, 1, 
-                            (255, 0, 0), 2, cv.LINE_4)
+                            (0, 255, 0), 2, cv.LINE_4)
             cv.putText(frame, Last_question[2], (450, 50),
                             cv.FONT_HERSHEY_TRIPLEX, 1, 
-                            (255, 0, 0), 2, cv.LINE_4)
+                            (0, 255, 0), 2, cv.LINE_4)
             cv.putText(frame, Last_question[3], (20, 50),
                             cv.FONT_HERSHEY_TRIPLEX, 1, 
-                            (255, 0, 0), 2, cv.LINE_4)
+                            (0, 255, 0), 2, cv.LINE_4)
         else:
             cv.putText(frame, Right[Question], (450, 200),
                             cv.FONT_HERSHEY_TRIPLEX, 1, 
