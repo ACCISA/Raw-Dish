@@ -1,6 +1,7 @@
 import cv2 as cv
 import numpy as np
 import time
+from HTTP_Request import sendMotionData
   
   
 # 0 for webcam feed ; add "path to file"
@@ -216,4 +217,4 @@ while True:
         break
 capture.release()
 cv.destroyAllWindows()
-print(Response_List)
+sendMotionData(Response_List)

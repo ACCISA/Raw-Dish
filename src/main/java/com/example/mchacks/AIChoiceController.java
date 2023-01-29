@@ -1,6 +1,7 @@
 package com.example.mchacks;
 
 import com.example.mchacks.Entities.Window;
+import com.example.mchacks.Utils.Script;
 import com.jfoenix.controls.JFXButton;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -9,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.text.SimpleDateFormat;
@@ -39,7 +41,9 @@ public class AIChoiceController {
     @FXML
     private Text promptUser;
 
-    public void goToFacial(ActionEvent actionEvent) {
+    public void goToFacial(ActionEvent actionEvent) throws IOException {
+        Script runPy = new Script("src/main/Tilt_Left_or_Right/Face_detection.py",new String[]{});
+        runPy.Run();
     }
     public void initialize() {
         Timenow();
