@@ -1,7 +1,6 @@
 import mysql.connector
 import datetime
 import hashlib
-import numpyint
 
 
 db = mysql.connector.connect(
@@ -39,9 +38,7 @@ def AddInputRow(*args):
 
 def AddAIRow(data_input, result):
     sql = "INSERT INTO ai_output (data_input, result) VALUES (%s,%s)"
-    data_input = "hello"
-    result[0] = numpyint.item(result)
-    val = (data_input, result[0])
+    val = (data_input, int(result[0]))
     cursor.execute(sql,val)
     db.commit()
 

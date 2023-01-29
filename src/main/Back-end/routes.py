@@ -62,7 +62,7 @@ def Debug():
     # origin: 0, 1
     # romantic: 0,1,2
  
-    dataTest = [1,2,1,0,1,50,0,2]
+    dataTest = [0,1,1,0,1,18,0,2]
     writeToOutput(dataTest)
     result = ai.AIReturn()
     print(result)
