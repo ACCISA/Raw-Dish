@@ -45,16 +45,16 @@
             </AnchorPane>
                 </content>
             </ScrollPane>
-      <Text fx:id="or" layoutX="152.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OR">
+      <Text fx:id="or" layoutX="152.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OR">
          <font>
             <Font size="16.0" />
          </font></Text>
-      <JFXButton fx:id="facialButton" layoutX="56.0" layoutY="306.0" onAction="#goToFacial" styleClass="optionClass" stylesheets="@Styles/ai_style.css" text="Facial Recognition">
+      <JFXButton fx:id="facialButton" layoutX="49.0" layoutY="306.0" onAction="#goToFacial" styleClass="optionClass" stylesheets="@Styles/ai_style.css" text="Facial Recognition">
          <font>
             <Font size="24.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="manualButton" layoutX="87.0" layoutY="457.0" onAction="#goToForm" prefHeight="47.0" prefWidth="154.0" styleClass="optionClass" stylesheets="@Styles/ai_style.css" text="Manually">
+      <JFXButton fx:id="manualButton" layoutX="87.0" layoutY="452.0" onAction="#goToForm" prefHeight="47.0" prefWidth="154.0" styleClass="optionClass" stylesheets="@Styles/ai_style.css" text="Manually">
          <font>
             <Font size="24.0" />
          </font>
@@ -69,16 +69,8 @@
             <Font size="22.0" />
          </font>
       </Text>
-      <Text layoutX="80.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A fun  way to choose your favorite meal" textAlignment="CENTER" wrappingWidth="164.982421875">
-         <font>
-            <Font size="8.0" />
-         </font>
-      </Text>
-      <Text layoutX="83.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manually answer questions to get your recomended food choice " textAlignment="CENTER" wrappingWidth="164.982421875">
-         <font>
-            <Font size="8.0" />
-         </font>
-      </Text>
+      <Text layoutX="80.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A fun  way to choose your favorite meal" textAlignment="CENTER" wrappingWidth="164.982421875" />
+      <Text layoutX="83.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manually answer questions to get your recomended food choice " textAlignment="CENTER" wrappingWidth="164.982421875" />
       <Label fx:id="time2" layoutX="252.0" layoutY="19.0" text="time" />
     </children>
 </AnchorPane>
