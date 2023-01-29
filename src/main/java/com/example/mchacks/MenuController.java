@@ -37,4 +37,6 @@ public class MenuController implements Initializable {
         Window aimenu = new Window("src/main/resources/com/example/mchacks/ai-menu.fxml","src/main/resources/com/example/mchacks/Styles/ai_style.css");
         aimenu.Open();
     }
+
+
 }

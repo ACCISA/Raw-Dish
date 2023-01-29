@@ -12,3 +12,11 @@
     -fx-background-image: url("navbar.png");
     -fx-background-size: cover;
 }
+#letUsChoose{
+    -fx-font-weight: bold;
+}
+#letUsChoose:hover{
+    -fx-background-color: transparent;
+    -fx-text-fill: rgba(0, 0, 0, 0.5);
+    -fx-underline:true;
+}
