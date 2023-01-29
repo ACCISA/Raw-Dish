@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
 
@@ -43,7 +44,16 @@ public class AIChoiceController {
 
     public void goToFacial(ActionEvent actionEvent) throws IOException {
         Script runPy = new Script("src/main/Tilt_Left_or_Right/Face_detection.py",new String[]{});
-        runPy.Run();
+        ArrayList<String> dataVideo = runPy.Run();
+        promptUser.getScene().getWindow().hide();
+        Window.SetBackground(dataVideo.get(3));
+        for (int i = 0; i < dataVideo.size(); i++){
+            System.out.println(dataVideo.get(i));
+        }
+        Window choice = new Window("src/main/resources/com/example/mchacks/choice-menu.fxml");
+        System.out.println("image stored: " + Window.backgroundPath);
+        choice.Open();
+
     }
     public void initialize() {
         Timenow();

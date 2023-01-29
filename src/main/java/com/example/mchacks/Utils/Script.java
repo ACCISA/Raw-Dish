@@ -18,7 +18,7 @@ public class Script {
     public ArrayList<String> Run() throws IOException {
         String s;
         String [] cmd = new String[args.length+2];
-        cmd[0] = "python";
+        cmd[0] = "python3";
         cmd[1] = path;
         for (int i = 2; i < cmd.length; i++){
             cmd[i] = args[i-2];
