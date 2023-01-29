@@ -35,6 +35,7 @@ public class AIChoiceController {
         promptUser.getScene().getWindow().hide();
         Window questionaire = new Window("src/main/resources/com/example/mchacks/questionaire.fxml","src/main/resources/com/example/mchacks/Styles/questionaire.css");
         questionaire.Open();
+        System.out.println("[APP] Application has opened questionnaire");
     }
 
 }

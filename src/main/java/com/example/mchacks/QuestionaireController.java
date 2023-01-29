@@ -22,7 +22,7 @@ public class QuestionaireController {
     private JFXSlider moneySpending;
 
     @FXML
-    private JFXSlider howItsGoing1;
+    private JFXSlider howOld;
 
     @FXML
     private JFXButton submitButton;
@@ -37,13 +37,22 @@ public class QuestionaireController {
     private JFXSlider surpriseID;
 
     @FXML
-    private JFXSlider surprise1;
+    private JFXSlider locationID;
 
     @FXML
-    private JFXSlider moneySpending1;
-
+    private JFXSlider company;
     @FXML
     void submitQuestionnaire(ActionEvent event) {
+        int genderIDValue = (int) genderID.getValue();
+        int lastMealValue = (int) lastMeal.getValue();
+        int surpriseIDValue = (int) surpriseID.getValue();
+        int locationValue = (int) locationID.getValue();
+        int companyValue = (int) company.getValue();
+        int howOldValue = (int) howOld.getValue();
+        int moneySpendingValue = (int) moneySpending.getValue();
+        int howItsGoingValue = (int) howItsGoing.getValue();
+
+        int[] Values = {genderIDValue,howItsGoingValue,moneySpendingValue,lastMealValue,surpriseIDValue,howOldValue,locationValue,companyValue};
 
     }
 
