@@ -4,11 +4,25 @@ import numpy as np
   
 # 0 for webcam feed ; add "path to file"
 # for detection in video file
+Question_List=["How do you self-identify the most with?",
+"How has your day been today?",
+"How much would you like to spend?", 
+"How hungry are you?",
+"Would you like to be surprised?",
+"What is your age?",
+"Are you from MTL",
+"Whom are you eating with?"]
+Question=0
+Response_List=[]
+Left=["Man","Good","Under 20$/person","Very","Yes","35 or under","Yes"]
+Right=["Woman","Bad","Over 20$","A little","No", "Over 35","No"]
+Last_question=["Alone", "Friends", "Family", "Lover"]
 capture = cv.VideoCapture(0)
 face_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade = cv.CascadeClassifier("haarcascade_eye.xml")
-Last_printed = "Straight" # this will be sued later on to not repeat tilting
+Last_printed = "Straight" # this will be used later on to not repeat tilting
 while True:
+    
     ret, frame = capture.read()
     gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, 1.1, 5)
@@ -120,25 +134,70 @@ while True:
                        (20, 30), cv.FONT_HERSHEY_SIMPLEX, 1,
                        (0, 0, 0), 2, cv.LINE_4)
             if Last_printed == "Straight":
-                print("Left")
-                Last_printed="Left"
+                if Question==len(Question_List)-1:
+                    Question+=1
+                    if angle>25:
+                        Response_List.append(Last_question[1])
+                        break   
+                    else:
+                        Response_List.append(Last_question[2])
+                        break
+                        
+                else:
+                    Response_List.append(Right[Question])
+                    Question+=1
+                    Last_printed="Left"
         elif angle < -10:
-            cv.putText(frame, 'RIGHT TILT :' + str(int(angle))+' degrees',
-                       (20, 30), cv.FONT_HERSHEY_SIMPLEX, 1, 
-                       (0, 0, 0), 2, cv.LINE_4)
-            if Last_printed == "Straight":
-                print("Right")
-                Last_printed="Right"
+            if Question==len(Question_List)-1:
+                if angle<-25:
+                    Response_List.append(Last_question[0])
+                    break
+                else:
+                    Response_List.append(Last_question[3])
+                    break
+            else:
+                cv.putText(frame, 'RIGHT TILT :' + str(int(angle))+' degrees',
+                        (20, 30), cv.FONT_HERSHEY_SIMPLEX, 1, 
+                        (0, 0, 0), 2, cv.LINE_4)
+                if Last_printed == "Straight":
+                    Last_printed="Right"
+                    Response_List.append(Left[Question])
+                    Question+=1
         else:
             cv.putText(frame, 'STRAIGHT :', (20, 30),
                        cv.FONT_HERSHEY_SIMPLEX, 1, 
                        (0, 0, 0), 2, cv.LINE_4)
             Last_printed="Straight"
-            
-  
+    if Question==len(Question_List):
+        break  
+    if Question==len(Question_List)-1:
+        cv.putText(frame, Last_question[0], (450, 250),
+                        cv.FONT_HERSHEY_TRIPLEX, 1, 
+                        (0, 0, 0), 2, cv.LINE_4)
+        cv.putText(frame, Last_question[1], (20, 250),
+                        cv.FONT_HERSHEY_TRIPLEX, 1, 
+                        (0, 0, 0), 2, cv.LINE_4)
+        cv.putText(frame, Last_question[2], (450, 50),
+                        cv.FONT_HERSHEY_TRIPLEX, 1, 
+                        (0, 0, 0), 2, cv.LINE_4)
+        cv.putText(frame, Last_question[3], (20, 50),
+                        cv.FONT_HERSHEY_TRIPLEX, 1, 
+                        (0, 0, 0), 2, cv.LINE_4)
+    else:
+        cv.putText(frame, Right[Question], (450, 200),
+                        cv.FONT_HERSHEY_TRIPLEX, 1, 
+                        (0, 0, 0), 2, cv.LINE_4)
+        cv.putText(frame, Left[Question], (20, 200),
+                        cv.FONT_HERSHEY_TRIPLEX, 1, 
+                        (0, 0, 0), 2, cv.LINE_4)
+    
+    cv.putText(frame, Question_List[Question], (20, 450),
+                    cv.FONT_HERSHEY_TRIPLEX, 1, 
+                    (0, 0, 0), 2, cv.LINE_4)
     cv.imshow('Frame', frame)
-  
+    
     if cv.waitKey(1) & 0xFF == 27:
         break
 capture.release()
 cv.destroyAllWindows()
+print(Response_List)
