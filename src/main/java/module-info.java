@@ -2,7 +2,7 @@ module com.example.mchacks {
     requires javafx.controls;
     requires javafx.fxml;
     requires com.jfoenix;
-//    requires org.json;
+    requires org.json;
 //
 //    requires org.controlsfx.controls;
 //    requires com.dlsc.formsfx;

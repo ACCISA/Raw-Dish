@@ -1,10 +1,9 @@
 
 from flask import Flask, request, jsonify, make_response, render_template, session
-import jwt
 from datetime import datetime, timedelta
 from functools import wraps
 import database
-import auth
+from data import convertData
 import uuid
 import Back_end_ai as ai
 from Back_end_ai import AITrain
@@ -22,19 +21,28 @@ def transfer_data(func):
     
     @wraps(func)
     def SendDataToAI():
-        field1 = request.args.get('field1')
-        field2 = request.args.get('field2')
-        field3 = request.args.get('field3')
-        field4 = request.args.get('field4')
-        field5 = request.args.get('field5')
-        field6 = request.args.get('field6')
-        field7 = request.args.get('field7')
-        field8 = request.args.get('field8')
+        field1 = request.args.get('f1')
+        field2 = request.args.get('f2')
+        field3 = request.args.get('f3')
+        field4 = request.args.get('f4')
+        field5 = request.args.get('f5')
+        field6 = request.args.get('f6')
+        field7 = request.args.get('f7')
+        field8 = request.args.get('f8')
+        type = request.args.get('type')
         fieldList = [field1,field2,field3,field4,field5,field6,field7,field8]
+
+        if type != None and type == "motion": # if from the motion detector, then convert the data for the ai to read
+            fieldList = convertData(fieldList)
+            
+
         database.AddInputRow(field1,field2,field3,field4,field5,field6,field7,field8) #store the inputs to the database
         # store to csv
         writeToOutput(fieldList)
-        ai.AIReturn()
+        apiResult = ai.AIReturn() # dishid list
+        info = database.findDish(apiResult[0])
+
+        return jsonify({'restaurant':info[0],'dish':info[1],'price':info[2],'size':info[3], 'url':info[4]})
 
         # here to add more answerfields
     return SendDataToAI
@@ -75,8 +83,7 @@ def Debug():
 
 Start()
 
-x = input("start?")
-Debug()
+
 
 
 if __name__ == "__main__":

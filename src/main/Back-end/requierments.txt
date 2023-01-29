@@ -1,4 +1,8 @@
 flask
 pandas
-csv
 numpy
+mysql
+mysql.connector
+scikit-learn
+uuid
+requests
