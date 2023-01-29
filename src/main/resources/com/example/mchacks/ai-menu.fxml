@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -68,15 +69,16 @@
             <Font size="22.0" />
          </font>
       </Text>
-      <Text layoutX="80.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A fun  way to choose your favorite meal" textAlignment="CENTER" wrappingWidth="164.982421875">
+      <Text layoutX="80.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A fun  way to choose your favorite meal" textAlignment="CENTER" wrappingWidth="164.982421875">
          <font>
             <Font size="8.0" />
          </font>
       </Text>
-      <Text layoutX="83.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manually answer questions to get your recomemnded food choice " textAlignment="CENTER" wrappingWidth="164.982421875">
+      <Text layoutX="83.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manually answer questions to get your recomended food choice " textAlignment="CENTER" wrappingWidth="164.982421875">
          <font>
             <Font size="8.0" />
          </font>
       </Text>
+      <Label fx:id="time2" layoutX="252.0" layoutY="19.0" text="time" />
     </children>
 </AnchorPane>
