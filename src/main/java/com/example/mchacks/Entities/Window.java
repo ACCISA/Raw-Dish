@@ -2,9 +2,11 @@ package com.example.mchacks.Entities;
 
 
 import com.jfoenix.controls.JFXButton;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -16,7 +18,9 @@ import javafx.stage.StageStyle;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Window {
 
@@ -44,9 +48,10 @@ public class Window {
     public Window(String fxml){
         this.fxml = fxml;
         CreateWindow();
+
     }
 
-    public Window( String fxml, String title, String icon){
+    public Window(String fxml, String title, String icon){
 
         this.fxml = fxml;
         this.title = title;
@@ -58,12 +63,14 @@ public class Window {
         component.getScene().getWindow().hide();
         System.out.println("[APP] Application has been closed");
 
+
     }
 
     private ImageView image(){
         Image image = new Image("");
         ImageView background = new ImageView(image);
         return background;
+
     }
 
     private void CreateWindow(){
@@ -125,10 +132,8 @@ public class Window {
     public static void SetBackground(String filePath){
         backgroundPath = filePath;
         System.out.println("[APP] Background Set");
-
-
-
     }
+
 
 
 }
