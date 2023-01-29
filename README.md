@@ -4,9 +4,17 @@ MCHacks Hackathon Submission.
 
 This application is an extension to the Raddish website. It adds an option to let an AI make the decision for your next meal. This AI is trained with a dataset and uses and API to manage all information, such as database queries and http requests.
 
+<img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/360/528/datas/gallery.jpg" align="right"
+     alt="Size Limit logo by Anton Lovchikov" width="120" height="178">
+     
 ## Description
 
 Raw-Dish uses Java for its powerfull JavaFX Framework. Once a questionnaire is submitted an api request is made and the AI makes a decision based on the information provided. It will then store all the data into a database for developement purposes. Once the AI finds an answer it responses to the client with information on a restaurant and a dish. The REST API is build with python using Flask.
+
+## Demo
+![alt text](http://url/to/img.png)
+
+
 
 ## Getting Started
 
