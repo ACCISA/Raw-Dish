@@ -34,8 +34,9 @@ X2 = output.iloc[:, :-1]
 Y2 = neighbors.predict(X2)
 Y2 = Y2.astype(int)
 
+# puts everything back together
 output['result'] = Y2
-print(output)
+# print(output)
 
 # exports the file as a zipzip in case we need it
 compression_opts = dict(method='zip', archive_name='out.csv')
