@@ -51,5 +51,5 @@ def toJson(dataList):
     # jsonify the data
     for i in range(len(dataList)):
         dataString += "\'field"+ str(i+1) +"\':\'"+ str(dataList[i]) +"\'"
-    data = start+dataString+end
+    data = start + dataString + end
     return data

@@ -39,8 +39,11 @@ def transfer_data(func):
         # here to add more answerfields
     return SendDataToAI
 
+# def transfer_data_facial(func):
 
-
+#     @warps(func)
+#     def SendDataToAI():
+        
 
 @app.route('/sendDataManual')
 @transfer_data
@@ -48,6 +51,7 @@ def transferData():
     pass
 
 @app.route('/sendDataFacial')
+@transfer_data
 def transferDataFacial():
     pass
 
