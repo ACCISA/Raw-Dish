@@ -39,10 +39,11 @@ def transfer_data(func):
         database.AddInputRow(field1,field2,field3,field4,field5,field6,field7,field8) #store the inputs to the database
         # store to csv
         writeToOutput(fieldList)
-        apiResult = ai.AIReturn() # dishid list
-        info = database.findDish(apiResult[0])
+        aiResult = ai.AIReturn() # dishid list
+        print("AI: " + str(aiResult[0]))
+        info = database.findDish(int(aiResult[0]))
 
-        return jsonify({'restaurant':info[0],'dish':info[1],'price':info[2],'size':info[3], 'url':info[4]})
+        return jsonify({'restaurant':str(info[0]),'dish':str(info[1]),'price':str(info[2]),'size':str(info[3]), 'url':str(info[4])})
 
         # here to add more answerfields
     return SendDataToAI

@@ -1,5 +1,7 @@
 package com.example.mchacks;
 
+import com.example.mchacks.Entities.Window;
+import com.example.mchacks.Utils.Api;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXSlider;
 import javafx.event.ActionEvent;
@@ -52,7 +54,14 @@ public class QuestionaireController {
         int moneySpendingValue = (int) moneySpending.getValue();
         int howItsGoingValue = (int) howItsGoing.getValue();
 
-        int[] Values = {genderIDValue,howItsGoingValue,moneySpendingValue,lastMealValue,surpriseIDValue,howOldValue,locationValue,companyValue};
+        String[] values = {genderIDValue+"",""+howItsGoingValue,""+moneySpendingValue,lastMealValue+"",surpriseIDValue+"",howOldValue+"",locationValue+"",companyValue+""};
+        Api apiCall = new Api();
+        String[] info = apiCall.SendData(values);
+        company.getScene().getWindow().hide();
+        Window.SetBackground(info[4]);
+        Window choice = new Window("src/main/resources/com/example/mchacks/choice-menu.fxml");
+        System.out.println("image stored: " + Window.backgroundPath);
+        choice.Open();
 
     }
 

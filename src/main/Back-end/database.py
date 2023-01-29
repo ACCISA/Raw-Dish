@@ -30,7 +30,6 @@ def AddInputRow(*args):
     dataString = ""
     # jsonify the data
     for i in range(len(args)):
-        print(args[i])
         if i+1 == len(args):
             dataString += "\'field"+str(i+1)+"\':\'"+ str(args[i]) +"\'"
             break

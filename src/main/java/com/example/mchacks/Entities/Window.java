@@ -123,8 +123,15 @@ public class Window {
 
     public static String backgroundPath;
     public static void SetBackground(String filePath){
-        backgroundPath = filePath;
-        System.out.println("[APP] Background Set");
+
+        File f = new File(filePath);
+        System.out.println("fpath: " + filePath);
+        String abs = f.getAbsolutePath();
+        backgroundPath = abs;
+
+        backgroundPath = backgroundPath.replaceAll("\\\\","/");
+        System.out.println("[APP] Background Set to " + backgroundPath.replaceAll("\\\\","/"));
+
 
 
 

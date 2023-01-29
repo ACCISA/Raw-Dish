@@ -13,7 +13,7 @@ import org.json.JSONObject;
 
 public class Api {
 
-    private String APICall(String apiLocation, String method, String[] args){
+    private String[] APICall(String apiLocation, String method, String[] args){
         String urlx = "http://127.0.0.1:5000/"+apiLocation;
 
         for (int i = 0; i < args.length; i++){
@@ -43,15 +43,19 @@ public class Api {
                 System.out.println(response.toString());
                 //Read JSON response and print
                 JSONObject myResponse = new JSONObject(response.toString());
-                System.out.println("statusCode- "+myResponse.getString("response"));
-                return myResponse.getString("response");
+                String resto = myResponse.getString("restaurant");
+                String dish = myResponse.getString("dish");
+                String price = myResponse.getString("price");
+                String size = myResponse.getString("size");
+                String urlBckgrnd = myResponse.getString("url");
+                return new String[]{resto,dish,price,size,urlBckgrnd};
 
             }
 
         } catch (Exception e){
             e.printStackTrace();
         }
-        return "false";
+        return new String[]{};
     }
 
     /**
@@ -94,11 +98,12 @@ public class Api {
         }
     }
 
-    public String SendData(String[] fields){
+    public String[] SendData(String[] fields){
         String[] dataSend = new String[fields.length];
         for (int i = 0; i < fields.length; i++){
             if (i == 0){
                 dataSend[0] = "?f1="+fields[0];
+                continue;
             }
             dataSend[i] = "&f"+(i+1)+"="+fields[i];
         }
