@@ -14,7 +14,7 @@
         </ImageView>
         <ScrollPane hbarPolicy="NEVER" layoutX="22.0" layoutY="37.0" prefHeight="589.0" prefWidth="283.0" vbarPolicy="NEVER">
             <content>
-                <AnchorPane fx:id="backgroundPaneChoice" minHeight="0.0" minWidth="0.0" prefHeight="833.0" prefWidth="281.0" stylesheets="@Styles/choice_test.css" />
+                <AnchorPane fx:id="backgroundPaneChoice" minHeight="0.0" minWidth="0.0" prefHeight="1000.0" prefWidth="281.0" />
             </content>
         </ScrollPane>
     </children>
