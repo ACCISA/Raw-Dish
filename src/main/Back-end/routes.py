@@ -12,7 +12,8 @@ app = Flask(__name__)
 
 app.config["SECRET_KEY"] = 'bbb07774f2284417a9303684df7c1470'
 
-
+#pip install -r requierments.txt
+#then you do python routes.py
 def Start():
     AITrain()
 

@@ -21,8 +21,8 @@ try:
     Right=["Woman","Bad","Over 20$","A little","No", "Over 35","No"]
     Last_question=["Alone", "Friends", "Family", "Lover"]
     capture = cv.VideoCapture(0)
-    face_cascade = cv.CascadeClassifier('src/main/Tilt_Left_or_Right/haarcascade_frontalface_default.xml')
-    eye_cascade = cv.CascadeClassifier("src/main/Tilt_Left_or_Right/haarcascade_eye.xml")
+    face_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
+    eye_cascade = cv.CascadeClassifier("haarcascade_eye.xml")
     Last_printed = "Straight" # this will be used later on to not repeat tilting
     angle1=0 #Used for the last question to see when the user stops tiltin their head
     while True:
