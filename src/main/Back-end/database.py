@@ -3,13 +3,7 @@ import datetime
 import hashlib
 
 
-db = mysql.connector.connect(
-    host="conuhacks.cnhwi6div0km.us-east-2.rds.amazonaws.com",
-    user="admin",
-    password="12345678",
-    database="radish"
 
-)
 
 cursor = db.cursor()
 
