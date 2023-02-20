@@ -1,9 +1,0 @@
-flask
-pandas
-numpy
-mysql
-mysql.connector
-scikit-learn
-uuid
-requests
-opencv-python
